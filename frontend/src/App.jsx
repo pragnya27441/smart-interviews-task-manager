@@ -42,7 +42,7 @@ const tasksPerPage = 3;
        setLoading(true);
 
       try {
-        const response = await fetch("http://localhost:5000/api/tasks", {
+        const response = await fetch("https://smart-interviews-task-manager-3.onrender.com/api/tasks", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -65,7 +65,7 @@ const tasksPerPage = 3;
      const fetchStats = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/tasks/stats",
+        "https://smart-interviews-task-manager-3.onrender.com/api/tasks/stats",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -91,7 +91,7 @@ const tasksPerPage = 3;
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/login",
+       "https://smart-interviews-task-manager-3.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: {
@@ -129,7 +129,7 @@ const tasksPerPage = 3;
   }
 
   try {
-    const response = await fetch("http://localhost:5000/api/auth/signup", {
+    const response = await fetch("https://smart-interviews-task-manager-3.onrender.com/api/auth/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -340,7 +340,7 @@ const paginatedTasks = filteredAndSortedTasks.slice(
 
             try {
               const response = await fetch(
-                "http://localhost:5000/api/tasks",
+               "https://smart-interviews-task-manager-3.onrender.com/api/tasks",
                 {
                   method: "POST",
                   headers: {
@@ -433,7 +433,7 @@ const paginatedTasks = filteredAndSortedTasks.slice(
                 onClick={async () => {
                   try {
                     const response = await fetch(
-                      `http://localhost:5000/api/tasks/${task._id}`,
+                      `https://smart-interviews-task-manager-3.onrender.com/api/tasks/${task._id}`,
                       {
                         method: "DELETE",
                         headers: {
@@ -540,7 +540,7 @@ const paginatedTasks = filteredAndSortedTasks.slice(
   onClick={async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/tasks/${editingTask._id}`,
+        `https://smart-interviews-task-manager-3.onrender.com/api/tasks/${editingTask._id}`,
         {
           method: "PUT",
           headers: {
